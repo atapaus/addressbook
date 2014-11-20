@@ -66,9 +66,8 @@ public class ButtonPartial extends HBox implements EventHandler<ActionEvent> {
         else if(event.getSource().equals(printButton))
         {
             System.out.println("Printing...");
-            for(int i = 0; i < persons.size(); i++)
-            {
-                printTextArea.appendText("Name: " + persons.get(i).getName()+ "\nAddress: " + persons.get(i).getAddress()+ "\nPhone:" + persons.get(i).getPhone()+ "\n");
+            for (Person person : persons) {
+                printTextArea.appendText("Name: " + person.getName() + "\nAddress: " + person.getAddress() + "\nPhone: " + person.getPhone() + "\n");
             }
             
 
